@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "framer-motion-animator": {
+      "source": "patricio0312rev/skills",
+      "sourceType": "github",
+      "computedHash": "22a8401fab0cdf32d5c153b98aba5e95435a479810896879535dc7ac3710efbe"
+    },
+    "nodejs-best-practices": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "9f8d3f268624c4757f4039617942d3e8ddcf420b9295cb943bea3bf9feb37e9d"
+    }
+  }
+}
