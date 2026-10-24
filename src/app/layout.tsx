@@ -27,22 +27,25 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/open-graph.jpg",
-        width: 1200,
-        height: 630,
+        url: "/images/open-graph.png",
+        width: 500,
+        height: 500,
         alt: eventConfig.meta.title,
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: eventConfig.meta.title,
     description: eventConfig.meta.description,
-    images: ["/images/open-graph.jpg"],
+    images: ["/images/open-graph.png"],
   },
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 };
