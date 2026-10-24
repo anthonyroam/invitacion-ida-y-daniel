@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Great_Vibes } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { eventConfig } from "@/config/event-details";
@@ -61,9 +61,14 @@ export const metadata: Metadata = {
     ],
   },
   other: {
-    "color-scheme": "only light",
+    "color-scheme": "light",
     "supported-color-schemes": "light",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FAF8F5",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -74,11 +79,11 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`light ${playfair.variable} ${greatVibes.variable} h-full antialiased`}
-      style={{ colorScheme: "only light" }}
+      className={`light ${playfair.variable} ${greatVibes.variable} h-full antialiased bg-background`}
+      style={{ colorScheme: "light" }}
     >
       <head>
-        <meta name="color-scheme" content="only light" />
+        <meta name="color-scheme" content="light" />
         <meta name="supported-color-schemes" content="light" />
         <meta name="theme-color" content="#FAF8F5" />
         <script
@@ -87,7 +92,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col items-center font-secondary bg-muted/40 text-foreground text-balance">
+      <body className="min-h-full flex flex-col items-center font-secondary bg-background text-foreground text-balance">
         <main className="w-full max-w-[700px] min-h-screen bg-background shadow-xl flex flex-col relative">
           {children}
         </main>

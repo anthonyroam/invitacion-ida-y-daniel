@@ -43,6 +43,7 @@
 }
 
 :root {
+  color-scheme: light;
   color-scheme: only light;
 
   /* Paleta canónica del evento:
@@ -80,8 +81,12 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html, body {
+  html, body, main {
+    color-scheme: light;
     color-scheme: only light;
+    forced-color-adjust: none;
+    -webkit-print-color-adjust: exact;
+    background-color: var(--background) !important;
   }
   html {
     @apply font-secondary;
