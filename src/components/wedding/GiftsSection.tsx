@@ -21,12 +21,12 @@ export function GiftsSection() {
             </div>
             <Spacer size="md" />
 
-            <Heading level={2}>
+            <Heading level={2} className="text-5xl md:text-6xl">
               {gifts.title}
             </Heading>
             <Spacer size="sm" />
 
-            <p className="font-secondary text-muted-foreground">
+            <p className="font-secondary text-base leading-relaxed text-muted-foreground">
               {gifts.description}
             </p>
           </div>

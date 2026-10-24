@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Alex_Brush, Figtree } from "next/font/google";
+import { Playfair_Display, Great_Vibes, Figtree } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { eventConfig } from "@/config/event-details";
 import "./globals.css";
 
-const alexBrush = Alex_Brush({
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const greatVibes = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-alex-brush",
+  variable: "--font-great-vibes",
 });
 
 const figtree = Figtree({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-figtree",
 });
 
@@ -56,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${alexBrush.variable} ${figtree.variable} h-full antialiased`}
+      className={`${playfair.variable} ${greatVibes.variable} ${figtree.variable} h-full antialiased`}
     >
       <head>
         <script
@@ -69,6 +73,11 @@ export default function RootLayout({
         <main className="w-full max-w-[700px] min-h-screen bg-background shadow-xl flex flex-col relative">
           {children}
         </main>
+        {/* Bottom viewport fade overlay */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed bottom-0 left-0 right-0 mx-auto w-full max-w-[700px] h-36 bg-gradient-to-t from-background via-background/70 to-transparent z-30"
+        />
         <Toaster position="top-center" />
       </body>
     </html>

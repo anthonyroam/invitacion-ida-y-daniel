@@ -58,7 +58,7 @@ Al cargar la página o al abrir el modal/drawer de confirmación, la web externa
       "notes": ""
     },
     "event": {
-      "title": "Boda María & Juan",
+      "title": "Boda Ida & Daniel",
       "event_date": "2026-11-20T20:00:00Z",
       "rsvp_deadline": "2026-10-31T23:59:59Z",
       "planner_phone": "+5491112345678"

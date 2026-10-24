@@ -22,11 +22,11 @@ export default function EventDetailsSection() {
   };
 
   return (
-    <Section className="pt-0" size="default">
+    <Section className="pt-2" size="default">
       <Container>
         {/* Título */}
         <FadeInUp>
-          <Heading level={2} className="text-center">
+          <Heading level={2} className="text-center text-5xl md:text-6xl">
             Detalles de la boda
           </Heading>
         </FadeInUp>
@@ -41,11 +41,11 @@ export default function EventDetailsSection() {
               <AnimatedChurch size={64} className="text-foreground" />
               <Spacer size="xs" />
 
-              <Heading level={3}>Ceremonia Religiosa</Heading>
+              <Heading level={3} className="text-4xl md:text-5xl">Ceremonia Religiosa</Heading>
 
               <Spacer size="xs" />
 
-              <div className="flex flex-col text-muted-foreground font-secondary">
+              <div className="flex flex-col text-muted-foreground font-secondary text-base leading-relaxed">
                 <span>Hora: {formatTime(ceremony.time)}</span>
                 <span>{ceremony.locationName}</span>
               </div>
@@ -67,11 +67,11 @@ export default function EventDetailsSection() {
               <AnimatedReception size={64} className="text-foreground" />
               <Spacer size="xs" />
 
-              <Heading level={3}>Recepción</Heading>
+              <Heading level={3} className="text-4xl md:text-5xl">Recepción</Heading>
 
               <Spacer size="xs" />
 
-              <div className="flex flex-col text-muted-foreground font-secondary">
+              <div className="flex flex-col text-muted-foreground font-secondary text-base leading-relaxed">
                 <span>Hora: {formatTime(reception.time)}</span>
                 <span>{reception.locationName}</span>
               </div>

@@ -39,9 +39,9 @@ export interface IntroEnvelopeProps {
 }
 
 export default function IntroEnvelope({
-  videoSrc = eventConfig.introVideo?.videoSrc || "/videos/envelope-weddy-template-04.mp4",
-  fadeStartTime = eventConfig.introVideo?.fadeStartTime ?? 2.4,
-  fadeDuration = eventConfig.introVideo?.fadeDuration ?? 0.6,
+  videoSrc = eventConfig.introVideo?.videoSrc || "/videos/envelope-weddy-template-02.mp4",
+  fadeStartTime = eventConfig.introVideo?.fadeStartTime ?? 3,
+  fadeDuration = eventConfig.introVideo?.fadeDuration ?? 0.4,
   eventName = "envelopeComplete",
   onComplete,
   className = "max-w-[700px]",

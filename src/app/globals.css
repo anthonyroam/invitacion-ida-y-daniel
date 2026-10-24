@@ -7,12 +7,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-primary: var(--font-alex-brush);
-  --font-secondary: var(--font-figtree);
+  --font-primary: var(--font-great-vibes);
+  --font-secondary: var(--font-playfair);
+  --font-serif: var(--font-playfair);
   --font-sans: var(--font-figtree);
-  --font-serif: var(--font-alex-brush);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-alex-brush);
+  --font-heading: var(--font-great-vibes);
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
@@ -41,32 +41,32 @@
 }
 
 :root {
-  /* Colores base de la paleta original (Neutral 800 & Sand) */
+  /* Paleta base y variantes OKLCH: Primary #48521C / Secondary #999F54 */
   --color-sand: oklch(0.98 0.01 85);
-  --color-sand-muted: oklch(0.96 0.02 85);
-  --color-sand-dark: oklch(0.92 0.03 85);
-  --color-neutral-800: oklch(0.35 0.015 321.41);
-  --color-neutral-600: oklch(0.48 0.015 321.41);
+  --color-sand-muted: oklch(0.95 0.02 112.76);
+  --color-sand-dark: oklch(0.91 0.03 112.76);
+  --color-olive-dark: oklch(0.35 0.04 118.76);
+  --color-olive-muted: oklch(0.52 0.04 118.76);
 
   /* Variables shadcn */
   --background: var(--color-sand);
-  --foreground: var(--color-neutral-800);
+  --foreground: var(--color-olive-dark);
   --card: var(--color-sand);
-  --card-foreground: var(--color-neutral-800);
+  --card-foreground: var(--color-olive-dark);
   --popover: var(--color-sand);
-  --popover-foreground: var(--color-neutral-800);
-  --primary: var(--color-neutral-800);
+  --popover-foreground: var(--color-olive-dark);
+  --primary: oklch(0.417 0.078 118.76);
   --primary-foreground: var(--color-sand);
-  --secondary: var(--color-sand-muted);
-  --secondary-foreground: var(--color-neutral-800);
+  --secondary: oklch(0.681 0.099 112.76);
+  --secondary-foreground: oklch(0.25 0.05 118.76);
   --muted: var(--color-sand-muted);
-  --muted-foreground: var(--color-neutral-600);
+  --muted-foreground: var(--color-olive-muted);
   --accent: var(--color-sand-dark);
-  --accent-foreground: var(--color-neutral-800);
+  --accent-foreground: var(--color-olive-dark);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.35 0.015 321.41 / 12%);
-  --input: oklch(0.35 0.015 321.41 / 15%);
-  --ring: var(--color-neutral-800);
+  --border: oklch(0.417 0.078 118.76 / 15%);
+  --input: oklch(0.417 0.078 118.76 / 20%);
+  --ring: oklch(0.417 0.078 118.76);
   --radius: 0.625rem;
 }
 
@@ -84,7 +84,7 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-primary text-balance;
   }
-  p, blockquote, cite, span {
-    @apply text-balance;
+  p, blockquote, cite {
+    @apply font-secondary text-balance;
   }
 }

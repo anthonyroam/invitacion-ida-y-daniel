@@ -12,7 +12,11 @@ const STICKY_TOPS = [40, 50, 60, 70, 80, 90];
 
 export function GallerySection() {
   const { gallery } = eventConfig;
-  const images = gallery.images ?? [];
+  const images = gallery?.images ?? [];
+
+  if (images.length === 0) {
+    return null;
+  }
 
   return (
     <FadeInUp>

@@ -44,7 +44,7 @@ function GuidelinesContent() {
   }, [token, guidelines.passes.defaultPasses]);
 
   return (
-    <Section size="default">
+    <Section size="default" className="pt-0">
       <Container>
         <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
 
@@ -56,17 +56,17 @@ function GuidelinesContent() {
               </div>
               <Spacer size="xs" />
 
-              <Heading level={2}>
+              <Heading level={2} className="text-5xl md:text-6xl">
                 {guidelines.passes.title}
               </Heading>
               <Spacer size="sm" />
 
-              <p className="font-secondary text-md text-muted-foreground">
+              <p className="font-secondary text-base leading-relaxed text-muted-foreground">
                 {guidelines.passes.description}
               </p>
               <Spacer size="md" />
 
-              <p className="font-secondary text-2xl text-foreground">
+              <p className="font-secondary text-2xl font-medium text-foreground">
                 {passCount} {passCount === 1 ? "pase" : "pases"}
               </p>
             </div>
@@ -77,7 +77,7 @@ function GuidelinesContent() {
           {/* Dress Code Block */}
           <FadeInUp>
             <div className="flex flex-col items-center">
-              <Heading level={2}>
+              <Heading level={2} className="text-5xl md:text-6xl">
                 {guidelines.dressCode.title}
               </Heading>
               <Spacer size="md" />
@@ -87,12 +87,12 @@ function GuidelinesContent() {
               </div>
               <Spacer size="xs" />
 
-              <Heading level={3}>
+              <Heading level={3} className="text-4xl md:text-5xl">
                 {guidelines.dressCode.style}
               </Heading>
               <Spacer size="sm" />
 
-              <p className="font-secondary text-md text-muted-foreground">
+              <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
                 {guidelines.dressCode.description}
               </p>
 
@@ -117,12 +117,12 @@ function GuidelinesContent() {
               </div>
               <Spacer size="xs" />
 
-              <Heading level={2}>
+              <Heading level={2} className="text-5xl md:text-6xl">
                 {guidelines.attendance.title}
               </Heading>
               <Spacer size="sm" />
 
-              <p className="font-secondary text-md text-muted-foreground">
+              <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
                 {guidelines.attendance.description}
               </p>
             </div>

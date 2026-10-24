@@ -8,6 +8,7 @@ export interface EventDetails {
     fadeStartTime: number;
     fadeDuration: number;
   };
+  logoUrl?: string;
   brideName: string;
   groomName: string;
   weddingDate: string;
@@ -35,6 +36,8 @@ export interface EventDetails {
     audioUrl: string;
   };
   quote: {
+    title: string;
+    paragraphs: string[];
     text: string;
     reference: string;
   };
@@ -74,35 +77,36 @@ export interface EventDetails {
   };
   farewell: {
     message: string;
-    imageUrl: string;
+    imageUrl?: string;
   };
 }
 
 export const eventConfig: EventDetails = {
   meta: {
-    title: "Maria & Andres",
+    title: "Ida & Daniel",
     description:
       "Nuestra historia de amor celebra su capítulo más soñado. Nos encantará que seas parte de este recuerdo inolvidable.",
   },
   introVideo: {
-    videoSrc: "/videos/envelope-weddy-template-04.mp4",
-    fadeStartTime: 2.4,
-    fadeDuration: 0.6,
+    videoSrc: "/videos/envelope-weddy-template-02.mp4",
+    fadeStartTime: 3,
+    fadeDuration: 0.4,
   },
-  brideName: "Maria",
-  groomName: "Andres",
-  weddingDate: "2027-08-09",
+  logoUrl: "/images/ida-y-daniel-logo.png",
+  brideName: "Ida",
+  groomName: "Daniel",
+  weddingDate: "2026-12-12",
   ceremony: {
     time: "15:00",
-    locationName: "Catedral de San Cristóbal",
-    locationAddress: "Centro Histórico, San Cristóbal",
-    mapUrl: "https://maps.google.com/?q=Catedral+de+San+Cristóbal",
+    locationName: "Iglesia Nuestra Señora de Chiquinquirá",
+    locationAddress: "Urbanización La Florida, Caracas",
+    mapUrl: "https://maps.app.goo.gl/hCazBc9sg4QCnqLC7",
   },
   reception: {
     time: "16:30",
-    locationName: "D'ensueños Casa Eventos",
-    locationAddress: "San Cristóbal",
-    mapUrl: "https://maps.google.com/?q=Densueños+Casa+Eventos",
+    locationName: "Undici Ristorante",
+    locationAddress: "Municipio Chacao, Caracas",
+    mapUrl: "https://maps.app.goo.gl/Cuoov8evBBnsWsCV7",
   },
   itinerary: {
     title: "Itinerario",
@@ -119,8 +123,14 @@ export const eventConfig: EventDetails = {
     audioUrl: "/audio/hasta-mi-final.mp3",
   },
   quote: {
-    text: "Y sobre todas estas cosas, vístanse de amor, que es el vínculo perfecto",
-    reference: "Colosenses 3:14",
+    title: "Diez años de amor… y una bendición para toda la vida",
+    paragraphs: [
+      "Tras una década compartiendo la dicha de ser esposos y padres de Marcelo Andrés, deseamos poner nuestra historia y nuestro hogar en manos del Creador.",
+      "Reconocemos lo importante que es tener la bendición de Dios en nuestras vidas para guiarnos y la alegría que nos da decidir caminar bajo Su luz.",
+      "Nos encantaría que nos acompañes a celebrar la gracia de nuestro Matrimonio Eclesiástico.",
+    ],
+    text: "Diez años de amor… y una bendición para toda la vida",
+    reference: "Ida & Daniel",
   },
   guidelines: {
     dressCode: {
@@ -146,13 +156,7 @@ export const eventConfig: EventDetails = {
   },
   gallery: {
     title: "Galería",
-    images: [
-      { src: "/images/hero-image.png", alt: "Nosotros 2" },
-      { src: "/images/quote-image.png", alt: "Nosotros 3" },
-      { src: "/images/farewell-image.png", alt: "Nosotros 4" },
-      { src: "/images/hero-image.png", alt: "Nosotros 2" },
-      { src: "/images/quote-image.png", alt: "Nosotros 3" },
-    ],
+    images: [],
   },
   rsvp: {
     title: "Confirmar asistencia",
@@ -161,6 +165,6 @@ export const eventConfig: EventDetails = {
   },
   farewell: {
     message: "¡Te esperamos!",
-    imageUrl: "/images/farewell-image.png",
+    imageUrl: "",
   },
 };

@@ -10,9 +10,9 @@ import { Heading } from "@/components/layout/Heading";
 
 // Helper para forzar números tabulares en fuentes que no lo soportan nativamente
 const FixedNumber = ({ num }: { num: string }) => (
-  <span className="flex justify-center">
+  <span className="flex justify-center font-medium font-primary tabular-nums">
     {num.split("").map((digit, i) => (
-      <span key={i} className="inline-block text-center w-[1ch] text-3xl">
+      <span key={i} className="inline-block text-center w-[1ch] text-4xl">
         {digit}
       </span>
     ))}
@@ -62,34 +62,34 @@ export default function Countdown() {
       <Container>
         <FadeInUp>
           <div className="flex flex-col items-center">
-            <Heading level={3}>Faltan...</Heading>
+            <Heading level={3} className="text-4xl md:text-5xl">Faltan...</Heading>
             <Spacer size="md" />
 
-            <div className="flex items-start justify-center text-3xl font-secondary gap-2 text-foreground">
+            <div className="flex items-start justify-center text-3xl gap-3 text-foreground">
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.days} />
-                <span className="font-primary text-xl text-muted-foreground">Días</span>
+                <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Días</span>
               </div>
 
-              <span>:</span>
+              <span className="font-medium font-primary tabular-nums">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.hours} />
-                <span className="font-primary text-xl text-muted-foreground">Horas</span>
+                <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Horas</span>
               </div>
 
-              <span>:</span>
+              <span className="font-medium font-primary tabular-nums">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.minutes} />
-                <span className="font-primary text-xl text-muted-foreground">Minutos</span>
+                <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Minutos</span>
               </div>
 
-              <span>:</span>
+              <span className="font-medium font-primary tabular-nums">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.seconds} />
-                <span className="font-primary text-xl text-muted-foreground">Segundos</span>
+                <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Segundos</span>
               </div>
             </div>
           </div>

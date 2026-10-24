@@ -8,7 +8,6 @@ import { FadeInUp } from "@/components/ui/animations";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { Spacer } from "@/components/layout/Spacer";
-import { Heading } from "@/components/layout/Heading";
 
 export default function SongSection() {
   const { songSettings } = eventConfig;
@@ -47,7 +46,7 @@ export default function SongSection() {
         {/* Frase animada */}
         <FadeInUp>
           <div className="flex flex-col items-center">
-            <p className="text-center text-2xl font-primary text-muted-foreground">
+            <p className="text-center text-xl font-secondary italic text-muted-foreground">
               {songSettings.message}
             </p>
 
