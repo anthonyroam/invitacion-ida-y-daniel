@@ -27,7 +27,8 @@ export function GiftsSection() {
             <Spacer size="sm" />
 
             <p className="font-secondary text-base leading-relaxed text-muted-foreground">
-              {gifts.description}
+              Lo que más deseamos es celebrar con ustedes.
+Si desean consentirnos con un regalo, cualquier detalle en efectivo o aporte digital será recibido con todo nuestro cariño y gratitud.
             </p>
           </div>
         </FadeInUp>

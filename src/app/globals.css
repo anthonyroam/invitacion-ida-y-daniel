@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.never-dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -43,6 +43,8 @@
 }
 
 :root {
+  color-scheme: only light;
+
   /* Paleta canónica del evento:
      Sand (Fondo/Cartas/Contraste): oklch(0.98 0.01 85)
      Olive (#48521C - Headings): oklch(0.417 0.078 118.76)
@@ -77,6 +79,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html, body {
+    color-scheme: only light;
   }
   html {
     @apply font-secondary;

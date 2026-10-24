@@ -60,6 +60,10 @@ export const metadata: Metadata = {
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
+  other: {
+    "color-scheme": "only light",
+    "supported-color-schemes": "light",
+  },
 };
 
 export default function RootLayout({
@@ -70,9 +74,13 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${greatVibes.variable} h-full antialiased`}
+      className={`light ${playfair.variable} ${greatVibes.variable} h-full antialiased`}
+      style={{ colorScheme: "only light" }}
     >
       <head>
+        <meta name="color-scheme" content="only light" />
+        <meta name="supported-color-schemes" content="light" />
+        <meta name="theme-color" content="#FAF8F5" />
         <script
           dangerouslySetInnerHTML={{
             __html: "history.scrollRestoration = 'manual'",
