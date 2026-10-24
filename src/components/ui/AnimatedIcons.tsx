@@ -8,7 +8,7 @@ interface AnimatedIconProps {
   className?: string;
 }
 
-export const AnimatedShirt = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedShirt = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -23,7 +23,7 @@ export const AnimatedShirt = ({ size = 24, color = "currentColor", className }: 
   </svg>
 );
 
-export const AnimatedChurch = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedChurch = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -38,7 +38,7 @@ export const AnimatedChurch = ({ size = 24, color = "currentColor", className }:
   </svg>
 );
 
-export const AnimatedMailOpen = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedMailOpen = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -51,7 +51,7 @@ export const AnimatedMailOpen = ({ size = 24, color = "currentColor", className 
   </svg>
 );
 
-export const AnimatedReception = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedReception = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -66,7 +66,7 @@ export const AnimatedReception = ({ size = 24, color = "currentColor", className
   </svg>
 );
 
-export const AnimatedGift = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedGift = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -80,7 +80,7 @@ export const AnimatedGift = ({ size = 24, color = "currentColor", className }: A
   </svg>
 );
 
-export const AnimatedMailCheck = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedMailCheck = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -95,7 +95,7 @@ export const AnimatedMailCheck = ({ size = 24, color = "currentColor", className
   </svg>
 );
 
-export const AnimatedAttendance = ({ size = 24, color = "currentColor", className }: AnimatedIconProps) => (
+export const AnimatedAttendance = ({ size = 80, color = "currentColor", className }: AnimatedIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}

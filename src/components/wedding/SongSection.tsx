@@ -55,7 +55,7 @@ export default function SongSection() {
             {/* Botón Play */}
             <motion.button
               onClick={togglePlay}
-              className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors outline-none cursor-pointer bg-primary text-primary-foreground"
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-colors outline-none cursor-pointer bg-primary text-primary-foreground"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               aria-label={isPlaying ? "Pausar canción" : "Reproducir canción"}

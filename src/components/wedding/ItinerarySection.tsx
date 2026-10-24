@@ -28,7 +28,7 @@ export function ItinerarySection() {
               <div key={index} className="flex flex-col items-center w-full">
                 <div className="w-full">
                   <div className="flex flex-col items-center text-center">
-                    <span className="text-sm font-medium tracking-widest uppercase mb-1 text-muted-foreground font-sans">
+                    <span className="text-sm font-medium tracking-widest uppercase mb-1 text-muted-foreground font-secondary">
                       {event.time}
                     </span>
                     <span className="text-3xl font-primary text-foreground">

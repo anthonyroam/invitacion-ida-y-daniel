@@ -77,6 +77,7 @@ export interface EventDetails {
   };
   farewell: {
     message: string;
+    description?: string;
     imageUrl?: string;
   };
 }
@@ -136,7 +137,7 @@ export const eventConfig: EventDetails = {
     dressCode: {
       title: "Dress code",
       style: "Formal",
-      description: "Prepárense para una boda llena de colores\n¡Dejen el blanco y el beige para los novios!",
+      description: "Se reserva el blanco, vino tinto y beige",
       colors: ["#C04B14", "#DECD68", "#C3A36D", "#7E9254", "#3B7A8B", "#6C6C6C", "#000000"],
       url: "https://pinterest.com/",
     },
@@ -164,7 +165,8 @@ export const eventConfig: EventDetails = {
     buttonText: "Confirmar asistencia",
   },
   farewell: {
-    message: "¡Te esperamos!",
+    description: "Tu presencia será una alegría y una bendición en este día tan especial.",
+    message: "¡Te esperamos para celebrar el amor!",
     imageUrl: "",
   },
 };

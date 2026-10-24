@@ -38,8 +38,8 @@ export default function EventDetailsSection() {
           {/* Columna Ceremonia */}
           <ScaleIn delay={0.1}>
             <div className="flex flex-col items-center text-center max-w-xs">
-              <AnimatedChurch size={64} className="text-foreground" />
-              <Spacer size="xs" />
+              <AnimatedChurch size={80} className="text-foreground" />
+              <Spacer size="sm" />
 
               <Heading level={3} className="text-4xl md:text-5xl">Ceremonia Religiosa</Heading>
 
@@ -64,8 +64,8 @@ export default function EventDetailsSection() {
           {/* Columna Recepción */}
           <ScaleIn delay={0.2}>
             <div className="flex flex-col items-center text-center max-w-xs">
-              <AnimatedReception size={64} className="text-foreground" />
-              <Spacer size="xs" />
+              <AnimatedReception size={80} className="text-foreground" />
+              <Spacer size="sm" />
 
               <Heading level={3} className="text-4xl md:text-5xl">Recepción</Heading>
 

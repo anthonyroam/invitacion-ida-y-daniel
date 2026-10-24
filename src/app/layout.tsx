@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Great_Vibes, Figtree } from "next/font/google";
+import { Playfair_Display, Great_Vibes } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { eventConfig } from "@/config/event-details";
 import "./globals.css";
@@ -13,11 +13,6 @@ const greatVibes = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
   variable: "--font-great-vibes",
-});
-
-const figtree = Figtree({
-  subsets: ["latin"],
-  variable: "--font-figtree",
 });
 
 export const metadata: Metadata = {
@@ -60,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${playfair.variable} ${greatVibes.variable} ${figtree.variable} h-full antialiased`}
+      className={`${playfair.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <head>
         <script
@@ -69,14 +64,20 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col items-center font-sans bg-muted/40 text-foreground text-balance">
+      <body className="min-h-full flex flex-col items-center font-secondary bg-muted/40 text-foreground text-balance">
         <main className="w-full max-w-[700px] min-h-screen bg-background shadow-xl flex flex-col relative">
           {children}
         </main>
-        {/* Bottom viewport fade overlay */}
+        {/* Top viewport fade overlay - Opción 3: Visor cinematográfico */}
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed bottom-0 left-0 right-0 mx-auto w-full max-w-[700px] h-36 bg-gradient-to-t from-background via-background/70 to-transparent z-30"
+          className="pointer-events-none fixed top-0 left-0 right-0 mx-auto w-full max-w-[700px] h-28 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_20%,transparent_100%)] bg-gradient-to-b from-background via-background/80 to-transparent z-30"
+        />
+
+        {/* Bottom viewport fade overlay - Opción 3: Visor cinematográfico */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed bottom-0 left-0 right-0 mx-auto w-full max-w-[700px] h-48 backdrop-blur-md [mask-image:linear-gradient(to_top,black_25%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_top,black_25%,transparent_100%)] bg-gradient-to-t from-background via-background/80 to-transparent z-30"
         />
         <Toaster position="top-center" />
       </body>

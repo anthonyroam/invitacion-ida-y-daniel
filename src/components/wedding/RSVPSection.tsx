@@ -22,8 +22,8 @@ export function RSVPSection() {
             </Heading>
             <Spacer size="sm" />
 
-            <div className="flex items-center justify-center opacity-80 text-foreground">
-              <AnimatedMailCheck size={64} />
+            <div className="flex items-center justify-center text-foreground">
+              <AnimatedMailCheck size={80} />
             </div>
             <Spacer size="xs" />
 

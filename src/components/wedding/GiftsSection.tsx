@@ -16,8 +16,8 @@ export function GiftsSection() {
       <Container>
         <FadeInUp>
           <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-            <div className="flex items-center justify-center opacity-80 text-foreground">
-              <AnimatedGift size={64} />
+            <div className="flex items-center justify-center text-foreground">
+              <AnimatedGift size={80} />
             </div>
             <Spacer size="md" />
 

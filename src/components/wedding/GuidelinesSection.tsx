@@ -51,10 +51,10 @@ function GuidelinesContent() {
           {/* Passes Block */}
           <FadeInUp>
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center opacity-80 text-foreground">
-                <AnimatedMailOpen size={64} />
+              <div className="flex items-center justify-center text-foreground">
+                <AnimatedMailOpen size={80} />
               </div>
-              <Spacer size="xs" />
+              <Spacer size="sm" />
 
               <Heading level={2} className="text-5xl md:text-6xl">
                 {guidelines.passes.title}
@@ -66,7 +66,7 @@ function GuidelinesContent() {
               </p>
               <Spacer size="md" />
 
-              <p className="font-secondary text-2xl font-medium text-foreground">
+              <p className="font-secondary text-3xl font-medium text-muted-foreground">
                 {passCount} {passCount === 1 ? "pase" : "pases"}
               </p>
             </div>
@@ -82,10 +82,10 @@ function GuidelinesContent() {
               </Heading>
               <Spacer size="md" />
 
-              <div className="flex items-center justify-center opacity-80 text-foreground">
-                <AnimatedShirt size={64} />
+              <div className="flex items-center justify-center text-foreground">
+                <AnimatedShirt size={80} />
               </div>
-              <Spacer size="xs" />
+              <Spacer size="sm" />
 
               <Heading level={3} className="text-4xl md:text-5xl">
                 {guidelines.dressCode.style}
@@ -109,25 +109,27 @@ function GuidelinesContent() {
 
           <Spacer size="xl" />
 
-          {/* Attendance Block (No niños) */}
-          <FadeInUp>
-            <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center opacity-80 text-foreground">
-                <AnimatedAttendance size={64} />
+          <div className="hidden">
+            {/* Attendance Block (No niños) */}
+            <FadeInUp>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center text-foreground">
+                  <AnimatedAttendance size={80} />
+                </div>
+                <Spacer size="xs" />
+
+                <Heading level={2} className="text-5xl md:text-6xl">
+                  {guidelines.attendance.title}
+                </Heading>
+                <Spacer size="sm" />
+
+                <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
+                  {guidelines.attendance.description}
+                </p>
               </div>
-              <Spacer size="xs" />
+            </FadeInUp>
 
-              <Heading level={2} className="text-5xl md:text-6xl">
-                {guidelines.attendance.title}
-              </Heading>
-              <Spacer size="sm" />
-
-              <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
-                {guidelines.attendance.description}
-              </p>
-            </div>
-          </FadeInUp>
-
+          </div>  
         </div>
       </Container>
     </Section>
