@@ -95,15 +95,6 @@ function GuidelinesContent() {
               <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
                 {guidelines.dressCode.description}
               </p>
-
-              <Spacer size="md" />
-
-              <Button
-                render={<a href={guidelines.dressCode.url} target="_blank" rel="noopener noreferrer" />}
-                nativeButton={false}
-              >
-                Inspirate para brillar
-              </Button>
             </div>
           </FadeInUp>
 

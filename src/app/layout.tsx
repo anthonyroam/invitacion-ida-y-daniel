@@ -15,22 +15,34 @@ const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
 });
 
+const getBaseUrl = () => {
+  if (process.env.APP_URL) return process.env.APP_URL;
+  if (process.env.NEXT_PUBLIC_APP_URL) return process.env.NEXT_PUBLIC_APP_URL;
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "https://invitacion-ida-y-daniel.vercel.app";
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.APP_URL || "https://template-invitation-02.vercel.app/"
-  ),
+  metadataBase: new URL(getBaseUrl()),
   title: eventConfig.meta.title,
   description: eventConfig.meta.description,
   openGraph: {
     title: eventConfig.meta.title,
     description: eventConfig.meta.description,
     type: "website",
+    locale: "es_ES",
     images: [
       {
         url: "/images/open-graph.png",
         width: 500,
         height: 500,
         alt: eventConfig.meta.title,
+        type: "image/png",
       },
     ],
   },

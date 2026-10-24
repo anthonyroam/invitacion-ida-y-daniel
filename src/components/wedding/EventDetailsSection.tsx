@@ -47,7 +47,10 @@ export default function EventDetailsSection() {
 
               <div className="flex flex-col text-muted-foreground font-secondary text-base leading-relaxed">
                 <span>Hora: {formatTime(ceremony.time)}</span>
-                <span>{ceremony.locationName}</span>
+                <span className="font-medium text-foreground">{ceremony.locationName}</span>
+                {ceremony.locationAddress && (
+                  <span className="text-sm">{ceremony.locationAddress}</span>
+                )}
               </div>
 
               <Spacer size="sm" />
@@ -73,7 +76,10 @@ export default function EventDetailsSection() {
 
               <div className="flex flex-col text-muted-foreground font-secondary text-base leading-relaxed">
                 <span>Hora: {formatTime(reception.time)}</span>
-                <span>{reception.locationName}</span>
+                <span className="font-medium text-foreground">{reception.locationName}</span>
+                {reception.locationAddress && (
+                  <span className="text-sm">{reception.locationAddress}</span>
+                )}
               </div>
 
               <Spacer size="sm" />
