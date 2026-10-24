@@ -137,7 +137,7 @@ export const eventConfig: EventDetails = {
     dressCode: {
       title: "Dress code",
       style: "Formal",
-      description: "Se reserva el blanco, vino tinto y beige",
+      description: "Se reserva el blanco, vinotinto y beige.",
       colors: ["#C04B14", "#DECD68", "#C3A36D", "#7E9254", "#3B7A8B", "#6C6C6C", "#000000"],
       url: "https://pinterest.com/",
     },

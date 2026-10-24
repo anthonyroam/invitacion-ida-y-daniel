@@ -17,15 +17,15 @@ export function RSVPSection() {
       <Container>
         <FadeInUp>
           <div className="flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-            <Heading level={2} className="text-5xl md:text-6xl">
-              {rsvp.title}
-            </Heading>
-            <Spacer size="sm" />
-
-            <div className="flex items-center justify-center text-foreground">
+              <div className="flex items-center justify-center text-foreground">
               <AnimatedMailCheck size={80} />
             </div>
-            <Spacer size="xs" />
+            <Spacer size="sm" />
+          <Heading level={2} className="text-5xl md:text-6xl">
+              {rsvp.title}
+            </Heading>
+
+            <Spacer size="sm" />
 
             <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
               {rsvp.description}

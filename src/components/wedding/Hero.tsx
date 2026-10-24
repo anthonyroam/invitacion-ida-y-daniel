@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
 import { eventConfig } from "@/config/event-details";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
@@ -13,8 +13,11 @@ export default function Hero() {
   const { logoUrl, brideName, groomName, weddingDate } = eventConfig;
   const [isReady, setIsReady] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
+  const [showIndicator, setShowIndicator] = useState(false);
   const overlayControls = useAnimation();
   const namesControls = useAnimation();
+  const { scrollY } = useScroll();
+  const scrollOpacity = useTransform(scrollY, [0, 80], [1, 0]);
 
   // Format date to "DD.MM.YYYY"
   const [year, month, day] = weddingDate.split("-");
@@ -64,6 +67,8 @@ export default function Hero() {
         opacity: 1,
         transition: { duration: 0.6, ease: "easeOut" },
       });
+
+      setShowIndicator(true);
 
       // Restore scroll after hero animation completes
       document.body.style.overflow = "";
@@ -123,7 +128,7 @@ export default function Hero() {
             {/* Date - Numeros grandes editoriales */}
             <Heading
               level={2}
-              className="font-primary tracking-[0.075em] text-4xl md:text-4xl text-muted-foreground font-light  uppercase"
+              className="font-primary tracking-[0.075em] text-4xl text-muted-foreground font-light  uppercase"
             >
               {formattedDate}
             </Heading>
@@ -131,7 +136,7 @@ export default function Hero() {
             <Spacer size="md" />
 
             {/* Logo de los novios a ancho completo */}
-            <div className="w-[130%] flex items-center justify-center px-2">
+            <div className="w-[130%] flex items-center justify-center px-2 ml-[-2.5%]">
               {logoUrl ? (
                 <div className="relative w-full max-w-[650px] aspect-[1456/1080] max-h-[58vh]">
                   <Image
@@ -171,6 +176,36 @@ export default function Hero() {
           </Container>
         </Section>
       </motion.div>
+
+      {/* Scroll Down Indicator - Elevated to z-40 so it sits cleanly ABOVE the viewport gradient */}
+      {showIndicator && (
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          style={{ opacity: scrollOpacity }}
+          className="absolute bottom-16 left-1/2 -translate-x-1/2 z-40 flex items-center gap-2 pointer-events-none"
+        >
+          <div className="w-4 h-6 border-2 border-foreground rounded-full flex justify-center p-1">
+            <motion.div
+              animate={{
+                y: [0, 0, 10, 10, 10, 0],
+                opacity: [0, 1, 1, 1, 1, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                times: [0, 0.3, 0.4, 0.6, 0.8, 1],
+                ease: "easeInOut",
+              }}
+              className="w-1 h-1 rounded-full bg-foreground"
+            />
+          </div>
+          <span className="text-xl font-secondary whitespace-nowrap text-foreground">
+            Desliza para continuar
+          </span>
+        </motion.div>
+      )}
     </div>
   );
 }
