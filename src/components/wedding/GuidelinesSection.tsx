@@ -56,7 +56,7 @@ function GuidelinesContent() {
               </div>
               <Spacer size="sm" />
 
-              <Heading level={2} className="text-5xl md:text-6xl">
+              <Heading level={2} className="text-5xl">
                 {guidelines.passes.title}
               </Heading>
               <Spacer size="sm" />
@@ -72,22 +72,22 @@ function GuidelinesContent() {
             </div>
           </FadeInUp>
 
-          <Spacer size="xl" />
+
 
           {/* Dress Code Block */}
           <FadeInUp>
-            <div className="flex flex-col items-center">
-              <Heading level={2} className="text-5xl md:text-6xl">
-                {guidelines.dressCode.title}
-              </Heading>
-              <Spacer size="md" />
-
+            <div className="flex flex-col items-center mt-20">
               <div className="flex items-center justify-center text-foreground">
                 <AnimatedShirt size={80} />
               </div>
               <Spacer size="sm" />
+              <Heading level={2} className="text-5xl">
+                {guidelines.dressCode.title}
+              </Heading>
 
-              <Heading level={3} className="text-4xl md:text-5xl">
+              <Spacer size="sm" />
+
+              <Heading level={3} className="text-3xl">
                 {guidelines.dressCode.style}
               </Heading>
               <Spacer size="sm" />
@@ -109,7 +109,7 @@ function GuidelinesContent() {
                 </div>
                 <Spacer size="xs" />
 
-                <Heading level={2} className="text-5xl md:text-6xl">
+                <Heading level={2} className="text-5xl">
                   {guidelines.attendance.title}
                 </Heading>
                 <Spacer size="sm" />

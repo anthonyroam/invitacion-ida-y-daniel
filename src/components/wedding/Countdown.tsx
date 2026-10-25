@@ -62,7 +62,7 @@ export default function Countdown() {
       <Container>
         <FadeInUp>
           <div className="flex flex-col items-center">
-            <Heading level={3} className="text-4xl md:text-5xl">Faltan...</Heading>
+            <Heading level={3} className="text-4xl">Faltan...</Heading>
             <Spacer size="md" />
 
             <div className="flex items-start justify-center text-3xl gap-3 text-foreground">

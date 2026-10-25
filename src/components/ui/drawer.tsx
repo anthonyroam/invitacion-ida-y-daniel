@@ -69,7 +69,7 @@ function DrawerContent({
         {...props}
       >
         <div className="mx-auto mt-3 h-1.5 w-12 shrink-0 rounded-full bg-muted-foreground/30" />
-        <div className="flex-1 overflow-y-auto overflow-x-hidden p-5 sm:p-6 pt-2">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden p-5 pt-2">
           {children}
         </div>
       </DrawerPrimitive.Content>
@@ -84,7 +84,7 @@ function DrawerHeader({
   return (
     <div
       data-slot="drawer-header"
-      className={cn("flex flex-col gap-1.5 p-4 text-center sm:text-left", className)}
+      className={cn("flex flex-col gap-1.5 p-4 text-center", className)}
       {...props}
     />
   )

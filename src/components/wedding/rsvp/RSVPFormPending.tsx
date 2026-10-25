@@ -40,7 +40,7 @@ export function RSVPFormPending({ guest, onSubmit, isSubmitting }: RSVPFormPendi
       </div>
 
       {/* 2. Choice Cards (Sí, asistiré / No podré asistir) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4 font-secondary">
+      <div className="grid grid-cols-1 gap-3 mb-4 font-secondary">
         {/* Opción Positiva: Sí, asistiré */}
         <button
           type="button"

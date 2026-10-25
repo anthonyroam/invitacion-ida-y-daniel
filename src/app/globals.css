@@ -89,19 +89,23 @@
     background-color: var(--background) !important;
   }
   html {
-    @apply font-secondary;
+    @apply font-secondary text-balance;
+    text-wrap: balance;
   }
   body {
-    @apply bg-background text-foreground font-secondary;
+    @apply bg-background text-foreground font-secondary text-balance;
     text-wrap: balance;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-primary text-foreground text-balance;
+    text-wrap: balance;
   }
   p, blockquote, cite {
     @apply font-secondary text-foreground/80 text-balance;
+    text-wrap: balance;
   }
-  button, input, textarea, select {
+  span, a, label, button, input, textarea, select {
     @apply font-secondary;
+    text-wrap: balance;
   }
 }

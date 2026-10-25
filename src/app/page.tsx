@@ -21,7 +21,6 @@ export default function Home() {
       <EventDetailsSection />
       <QuoteSection />
       <GuidelinesSection />
-      <ItinerarySection />
       <GiftsSection />
       <GallerySection />
       <RSVPSection />

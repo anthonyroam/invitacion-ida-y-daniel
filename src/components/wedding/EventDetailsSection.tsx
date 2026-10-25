@@ -26,7 +26,7 @@ export default function EventDetailsSection() {
       <Container>
         {/* Título */}
         <FadeInUp>
-          <Heading level={2} className="text-center text-5xl md:text-6xl">
+          <Heading level={2} className="text-center text-5xl">
             Detalles de la boda
           </Heading>
         </FadeInUp>
@@ -41,7 +41,7 @@ export default function EventDetailsSection() {
               <AnimatedChurch size={80} className="text-foreground" />
               <Spacer size="sm" />
 
-              <Heading level={3} className="text-4xl md:text-5xl">Ceremonia Religiosa</Heading>
+              <Heading level={3} className="text-4xl">Ceremonia Religiosa</Heading>
 
               <Spacer size="xs" />
 
@@ -70,7 +70,7 @@ export default function EventDetailsSection() {
               <AnimatedReception size={80} className="text-foreground" />
               <Spacer size="sm" />
 
-              <Heading level={3} className="text-4xl md:text-5xl">Recepción</Heading>
+              <Heading level={3} className="text-4xl">Recepción</Heading>
 
               <Spacer size="xs" />
 

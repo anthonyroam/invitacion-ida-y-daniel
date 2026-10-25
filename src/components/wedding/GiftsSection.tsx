@@ -21,7 +21,7 @@ export function GiftsSection() {
             </div>
             <Spacer size="md" />
 
-            <Heading level={2} className="text-5xl md:text-6xl">
+            <Heading level={2} className="text-5xl">
               {gifts.title}
             </Heading>
             <Spacer size="sm" />

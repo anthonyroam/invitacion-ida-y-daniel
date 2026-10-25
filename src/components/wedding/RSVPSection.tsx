@@ -21,7 +21,7 @@ export function RSVPSection() {
               <AnimatedMailCheck size={80} />
             </div>
             <Spacer size="sm" />
-          <Heading level={2} className="text-5xl md:text-6xl">
+          <Heading level={2} className="text-5xl">
               {rsvp.title}
             </Heading>
 

@@ -152,21 +152,21 @@ export default function Hero() {
                 <div className="flex flex-col items-center">
                   <Heading
                     level={1}
-                    className="leading-none text-foreground text-7xl md:text-8xl"
+                    className="leading-none text-foreground text-7xl"
                   >
                     {brideName}
                   </Heading>
 
                   <Heading
                     level={1}
-                    className="leading-none text-foreground text-7xl md:text-8xl"
+                    className="leading-none text-foreground text-7xl"
                   >
                     &
                   </Heading>
 
                   <Heading
                     level={1}
-                    className="leading-none text-foreground text-7xl md:text-8xl"
+                    className="leading-none text-foreground text-7xl"
                   >
                     {groomName}
                   </Heading>

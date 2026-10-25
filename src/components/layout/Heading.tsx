@@ -20,10 +20,10 @@ export function Heading({
     <Comp
       className={cn(
         // Font base para los títulos (Alex Brush)
-        "font-primary font-normal text-foreground",
+        "font-primary font-normal text-foreground text-balance",
         {
           "text-7xl": level === 1,
-          "text-4xl": level === 2,
+          "text-5xl": level === 2,
           "text-3xl": level === 3,
           "text-2xl": level === 4,
           "text-xl": level === 5,
