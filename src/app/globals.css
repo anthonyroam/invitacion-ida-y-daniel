@@ -104,8 +104,11 @@
     @apply font-secondary text-foreground/80 text-balance;
     text-wrap: balance;
   }
-  span, a, label, button, input, textarea, select {
+  a, label, button, input, textarea, select {
     @apply font-secondary;
+    text-wrap: balance;
+  }
+  span {
     text-wrap: balance;
   }
 }

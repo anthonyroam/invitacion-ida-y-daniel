@@ -8,11 +8,11 @@ import { Container } from "@/components/layout/Container";
 import { Spacer } from "@/components/layout/Spacer";
 import { Heading } from "@/components/layout/Heading";
 
-// Helper para forzar números tabulares en fuentes que no lo soportan nativamente
+// Helper para renderizar números en Great Vibes (font-primary)
 const FixedNumber = ({ num }: { num: string }) => (
-  <span className="flex justify-center font-medium font-primary tabular-nums">
+  <span className="flex justify-center font-primary font-normal leading-none">
     {num.split("").map((digit, i) => (
-      <span key={i} className="inline-block text-center w-[1ch] text-4xl">
+      <span key={i} className="inline-block text-center font-primary text-5xl leading-none px-0.5">
         {digit}
       </span>
     ))}
@@ -71,21 +71,21 @@ export default function Countdown() {
                 <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Días</span>
               </div>
 
-              <span className="font-medium font-primary tabular-nums">:</span>
+              <span className="font-primary text-3xl leading-none pt-2 text-foreground/60">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.hours} />
                 <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Horas</span>
               </div>
 
-              <span className="font-medium font-primary tabular-nums">:</span>
+              <span className="font-primary text-3xl leading-none pt-2 text-foreground/60">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.minutes} />
                 <span className="font-secondary text-sm uppercase tracking-wider text-muted-foreground mt-1">Minutos</span>
               </div>
 
-              <span className="font-medium font-primary tabular-nums">:</span>
+              <span className="font-primary text-3xl leading-none pt-2 text-foreground/60">:</span>
 
               <div className="flex flex-col items-center">
                 <FixedNumber num={timeLeft.seconds} />
