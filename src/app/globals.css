@@ -101,7 +101,7 @@
     text-wrap: balance;
   }
   p, blockquote, cite {
-    @apply font-secondary text-foreground/80 text-balance;
+    @apply font-secondary text-lg text-foreground/80 text-balance;
     text-wrap: balance;
   }
   a, label, button, input, textarea, select {

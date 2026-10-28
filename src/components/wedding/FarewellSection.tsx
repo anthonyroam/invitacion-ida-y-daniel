@@ -17,7 +17,7 @@ export function FarewellSection() {
           <div className="text-center max-w-sm mx-auto flex flex-col items-center">
             {farewell.description && (
               <>
-                <p className="font-secondary italic text-base text-muted-foreground leading-relaxed">
+                <p className="font-secondary italic text-lg text-muted-foreground leading-relaxed">
                   {farewell.description}
                 </p>
                 <Spacer size="md" />

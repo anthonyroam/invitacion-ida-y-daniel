@@ -27,7 +27,7 @@ export function RSVPSection() {
 
             <Spacer size="sm" />
 
-            <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
+            <p className="font-secondary text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
               {rsvp.description}
             </p>
             <Spacer size="md" />

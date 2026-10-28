@@ -61,7 +61,7 @@ function GuidelinesContent() {
               </Heading>
               <Spacer size="sm" />
 
-              <p className="font-secondary text-base leading-relaxed text-muted-foreground">
+              <p className="font-secondary text-lg leading-relaxed text-muted-foreground">
                 {guidelines.passes.description}
               </p>
               <Spacer size="md" />
@@ -92,7 +92,7 @@ function GuidelinesContent() {
               </Heading>
               <Spacer size="sm" />
 
-              <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
+              <p className="font-secondary text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
                 {guidelines.dressCode.description}
               </p>
             </div>
@@ -114,7 +114,7 @@ function GuidelinesContent() {
                 </Heading>
                 <Spacer size="sm" />
 
-                <p className="font-secondary text-base leading-relaxed text-muted-foreground whitespace-pre-line">
+                <p className="font-secondary text-lg leading-relaxed text-muted-foreground whitespace-pre-line">
                   {guidelines.attendance.description}
                 </p>
               </div>

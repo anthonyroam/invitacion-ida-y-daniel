@@ -23,7 +23,7 @@ export function QuoteSection() {
               {quote.paragraphs.map((paragraph, idx) => (
                 <p
                   key={idx}
-                  className="font-secondary text-base leading-relaxed text-muted-foreground"
+                  className="font-secondary text-lg leading-relaxed text-muted-foreground"
                 >
                   {paragraph}
                 </p>
