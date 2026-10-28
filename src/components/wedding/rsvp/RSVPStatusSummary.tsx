@@ -44,7 +44,7 @@ export function RSVPStatusSummary({ guest, event }: RSVPStatusSummaryProps) {
       </div>
 
       {/* 2. Cuerpo del Resumen */}
-      <div className="border border-border p-4 space-y-3 bg-secondary/15 text-left font-secondary">
+      <div className="border border-border p-4 space-y-3 bg-background text-left font-secondary">
         <div className="flex items-center justify-between">
           <span className="font-secondary text-sm font-medium text-muted-foreground">
             Estado de asistencia

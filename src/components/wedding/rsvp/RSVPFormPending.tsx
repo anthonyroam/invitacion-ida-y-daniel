@@ -48,7 +48,7 @@ export function RSVPFormPending({ guest, onSubmit, isSubmitting }: RSVPFormPendi
           className={cn(
             "relative flex items-center justify-between p-4 border-2 transition-all duration-200 cursor-pointer text-left group",
             selectedStatus === "confirmed"
-              ? "border-emerald-600 bg-emerald-50/50 dark:bg-emerald-950/20 shadow-xs"
+              ? "border-emerald-600 bg-background shadow-xs"
               : "border-border bg-background hover:bg-secondary/20"
           )}
         >
@@ -81,7 +81,7 @@ export function RSVPFormPending({ guest, onSubmit, isSubmitting }: RSVPFormPendi
           className={cn(
             "relative flex items-center justify-between p-4 border-2 transition-all duration-200 cursor-pointer text-left group",
             selectedStatus === "declined"
-              ? "border-destructive/60 bg-destructive/5 shadow-xs"
+              ? "border-destructive/60 bg-background shadow-xs"
               : "border-border bg-background hover:bg-secondary/20"
           )}
         >
@@ -118,7 +118,7 @@ export function RSVPFormPending({ guest, onSubmit, isSubmitting }: RSVPFormPendi
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="overflow-hidden pt-1"
           >
-            <div className="border border-border p-4 bg-secondary/15 space-y-4 font-secondary">
+            <div className="border border-border p-4 bg-background space-y-4 font-secondary">
               {/* Header: Label Pases a la izquierda y Badge Máximo a la derecha */}
               <div className="flex items-center justify-between">
                 <span className="font-secondary text-sm font-semibold text-foreground">

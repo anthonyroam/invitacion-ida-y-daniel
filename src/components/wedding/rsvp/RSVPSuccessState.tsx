@@ -52,7 +52,7 @@ export function RSVPSuccessState({ guest, event, onClose }: RSVPSuccessStateProp
       </div>
 
       {/* Summary Box */}
-      <div className="border border-border p-4.5 space-y-3 bg-secondary/30 text-left font-secondary">
+      <div className="border border-border p-4.5 space-y-3 bg-background text-left font-secondary">
         <div className="flex items-center justify-between">
           <span className="font-secondary text-xs uppercase tracking-wider font-semibold text-muted-foreground">
             Invitado
