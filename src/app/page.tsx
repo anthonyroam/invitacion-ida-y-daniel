@@ -6,7 +6,6 @@ import SongSection from "@/components/wedding/SongSection";
 import Countdown from "@/components/wedding/Countdown";
 import EventDetailsSection from "@/components/wedding/EventDetailsSection";
 import { GiftsSection } from "@/components/wedding/GiftsSection";
-import { RSVPSection } from "@/components/wedding/RSVPSection";
 import { RSVPWhatsAppSection } from "@/components/wedding/RSVPWhatsAppSection";
 import { FarewellSection } from "@/components/wedding/FarewellSection";
 import { ItinerarySection } from "@/components/wedding/ItinerarySection";
@@ -24,7 +23,6 @@ export default function Home() {
       <GuidelinesSection />
       <GiftsSection />
       <GallerySection />
-      <RSVPSection />
       <RSVPWhatsAppSection />
       <FarewellSection />
     </div>

@@ -74,6 +74,7 @@ export interface EventDetails {
     title: string;
     description: string;
     buttonText: string;
+    whatsappNumber?: string;
   };
   farewell: {
     message: string;
@@ -93,7 +94,7 @@ export const eventConfig: EventDetails = {
     fadeStartTime: 3,
     fadeDuration: 0.4,
   },
-  logoUrl: "/images/ida-y-daniel-logo.png",
+  logoUrl: "/images/ida-y-daniel-logo-v2.png",
   brideName: "Ida",
   groomName: "Daniel",
   weddingDate: "2026-12-12",
@@ -127,7 +128,7 @@ export const eventConfig: EventDetails = {
     title: "Diez años de amor… y una bendición para toda la vida",
     paragraphs: [
       "Tras una década compartiendo la dicha de ser esposos y padres de Marcelo Andrés, deseamos poner nuestra historia y nuestro hogar en manos del Creador.",
-      "Reconocemos lo importante que es tener la bendición de Dios en nuestras vidas para guiarnos y la alegría que nos da decidir caminar bajo Su luz.",
+      "Reconocemos lo importante que es tener la bendición de Dios en nuestras vidas para guiarnos y la alegría que nos da decidir caminar bajo su luz.",
       "Nos encantaría que nos acompañes a celebrar la gracia de nuestro Matrimonio Eclesiástico.",
     ],
     text: "Diez años de amor… y una bendición para toda la vida",
@@ -163,6 +164,7 @@ export const eventConfig: EventDetails = {
     title: "Confirmar asistencia",
     description: "¡Nos encantaría que nos acompañes!\nPor favor confírmanos tu asistencia lo antes posible, tu presencia es muy importante para nosotros.",
     buttonText: "Confirmar asistencia",
+    whatsappNumber: "584247073678",
   },
   farewell: {
     description: "Tu presencia será una alegría y una bendición en este día tan especial.",

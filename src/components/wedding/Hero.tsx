@@ -138,7 +138,7 @@ export default function Hero() {
             {/* Logo de los novios a ancho completo */}
             <div className="w-[130%] flex items-center justify-center px-2 ml-[-2.5%]">
               {logoUrl ? (
-                <div className="relative w-full max-w-[650px] aspect-[1456/1080] max-h-[58vh]">
+                <div className="relative w-full max-w-[650px] aspect-[1283/958] max-h-[58vh]">
                   <Image
                     src={logoUrl}
                     alt={`${brideName} & ${groomName}`}

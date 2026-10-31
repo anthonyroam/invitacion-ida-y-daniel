@@ -11,7 +11,7 @@ import { eventConfig } from "@/config/event-details";
 
 export function RSVPWhatsAppSection() {
   const { rsvp, brideName, groomName } = eventConfig;
-  const phoneNumber = "584247073678";
+  const phoneNumber = rsvp.whatsappNumber || "584247073678";
   const message = `¡Hola! Quiero confirmar mi asistencia a la boda de ${brideName} y ${groomName}.`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
