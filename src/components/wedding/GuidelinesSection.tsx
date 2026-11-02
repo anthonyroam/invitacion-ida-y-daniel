@@ -25,9 +25,39 @@ function GuidelinesContent() {
   const token = searchParams.get("token") || searchParams.get("rsvp_token") || searchParams.get("guestId");
   const { guidelines } = eventConfig;
 
-  const [passCount, setPassCount] = useState(guidelines.passes.defaultPasses);
+  const [passCount, setPassCount] = useState(() => {
+    const queryPasses = searchParams.get("passes") || searchParams.get("pases");
+    if (queryPasses) {
+      const parsed = parseInt(queryPasses, 10);
+      if (!isNaN(parsed) && parsed > 0) return parsed;
+    }
+    return guidelines.passes.defaultPasses;
+  });
 
   useEffect(() => {
+    // 1. Parámetro de pases prioritario en query o pathname (ej: ?passes=1, /passes=1)
+    const queryPasses = searchParams.get("passes") || searchParams.get("pases");
+    if (queryPasses) {
+      const parsed = parseInt(queryPasses, 10);
+      if (!isNaN(parsed) && parsed > 0) {
+        setPassCount(parsed);
+        return;
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      const match = window.location.pathname.match(/(?:passes|pases)[=/](\d+)/i) ||
+                    window.location.href.match(/[?&#/](?:passes|pases)[=/](\d+)/i);
+      if (match && match[1]) {
+        const parsed = parseInt(match[1], 10);
+        if (!isNaN(parsed) && parsed > 0) {
+          setPassCount(parsed);
+          return;
+        }
+      }
+    }
+
+    // 2. Consulta dinámica por token de invitado si no viene el parámetro directo
     async function fetchGuest() {
       if (token) {
         try {
@@ -41,7 +71,7 @@ function GuidelinesContent() {
       }
     }
     fetchGuest();
-  }, [token, guidelines.passes.defaultPasses]);
+  }, [token, searchParams, guidelines.passes.defaultPasses]);
 
   return (
     <Section size="default" className="pt-0">

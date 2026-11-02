@@ -9,6 +9,26 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/passes=:count(\\d+){/}?",
+        destination: "/?passes=:count",
+      },
+      {
+        source: "/pases=:count(\\d+){/}?",
+        destination: "/?passes=:count",
+      },
+      {
+        source: "/passes/:count(\\d+){/}?",
+        destination: "/?passes=:count",
+      },
+      {
+        source: "/pases/:count(\\d+){/}?",
+        destination: "/?passes=:count",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

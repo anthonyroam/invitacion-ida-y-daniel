@@ -99,13 +99,13 @@ export const eventConfig: EventDetails = {
   groomName: "Daniel",
   weddingDate: "2026-12-12",
   ceremony: {
-    time: "15:00",
+    time: "14:30",
     locationName: "Iglesia Nuestra Señora de Chiquinquirá",
     locationAddress: "Urbanización La Florida, Caracas",
     mapUrl: "https://maps.app.goo.gl/hCazBc9sg4QCnqLC7",
   },
   reception: {
-    time: "16:30",
+    time: "17:30",
     locationName: "Undici Ristorante",
     locationAddress: "Municipio Chacao, Caracas",
     mapUrl: "https://maps.app.goo.gl/Cuoov8evBBnsWsCV7",
@@ -136,7 +136,7 @@ export const eventConfig: EventDetails = {
   },
   guidelines: {
     dressCode: {
-      title: "Dress code",
+      title: "Codigo de vestimenta",
       style: "Formal",
       description: "Se reserva el blanco, vinotinto y beige.",
       colors: ["#C04B14", "#DECD68", "#C3A36D", "#7E9254", "#3B7A8B", "#6C6C6C", "#000000"],
@@ -164,7 +164,7 @@ export const eventConfig: EventDetails = {
     title: "Confirmar asistencia",
     description: "¡Nos encantaría que nos acompañes!\nPor favor confírmanos tu asistencia lo antes posible, tu presencia es muy importante para nosotros.",
     buttonText: "Confirmar asistencia",
-    whatsappNumber: "584247073678",
+    whatsappNumber: "584142163501",
   },
   farewell: {
     description: "Tu presencia será una alegría y una bendición en este día tan especial.",
