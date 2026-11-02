@@ -136,7 +136,7 @@ export const eventConfig: EventDetails = {
   },
   guidelines: {
     dressCode: {
-      title: "Codigo de vestimenta",
+      title: "Código de vestimenta",
       style: "Formal",
       description: "Se reserva el blanco, vinotinto y beige.",
       colors: ["#C04B14", "#DECD68", "#C3A36D", "#7E9254", "#3B7A8B", "#6C6C6C", "#000000"],
